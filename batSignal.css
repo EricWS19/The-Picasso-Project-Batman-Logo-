@@ -1,0 +1,74 @@
+.batman {
+    margin-top: 200px;
+    padding-top: 200px;
+}
+.body{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transform: translateX(-50%);
+}
+.head{
+    position:absolute;
+    top: 0;
+    left: 50%;
+    width: 40px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+.wings{
+    position: absolute;
+    top: 10px; 
+    left: 50%;
+    width: 160px;
+    height: 80px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+.wing-left,
+.wing-right{
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    clip-path: polygon(100% 0, 0% 50%, 100% 100%);
+}
+
+.wing-left {
+    transform: rotate(-20deg);
+}
+
+.wing-right {
+    transform: rotate(20deg);
+}
+
+.batman::before {
+    content: '';
+    position: absolute;
+    top: 30px; /* Adjust vertical position */
+    left: 15%; /* Adjust horizontal position */
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    transform: rotate(-45deg); /* Adjust rotation */
+  }
+  
+  .batman::after {
+    content: '';
+    position: absolute;
+    top: 30px; /* Adjust vertical position */
+    right: 15%; /* Adjust horizontal position */
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    transform: rotate(45deg); /* Adjust rotation */
+  }
